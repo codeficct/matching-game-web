@@ -1,0 +1,35 @@
+{
+  "name": "matching-game-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Matching Game, El juego de memoria visual de combinaciones. Proyecto de investigación para la Feria de Proyectos de Investigación 2-2022 de la FICCT-UAGRM",
+  "author": {
+    "name": "Luis Gabriel Janco Alvarez",
+    "email": "sauterdevs@gmail.com",
+    "url": "https://github.com/LuiSauter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.cin:codeficct/matching-game-web.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.5",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "mongoose": "^6.9.0",
+    "next": "13.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.7.1"
+  },
+  "devDependencies": {
+    "standard": "17.0.0"
+  }
+}
