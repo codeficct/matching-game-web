@@ -1,0 +1,57 @@
+.demo {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.demo img {
+  z-index: 1;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.firstImage, .secondImage, .thirdImage {
+  width: max-content;
+  height: 364px;
+  aspect-ratio: 7/14;
+  position: relative;
+}
+
+.firstImage {
+  transform: matrix(1, 0, 0, 1, 0, 290);
+  transition: transform 0.4s ease-out;
+}
+.secondImage {
+  transform: matrix(1, 0, 0, 1, 0, 160);
+  transition: transform 0.4s ease-out;
+}
+.thirdImage {
+  transform: matrix(1, 0, 0, 1, 0, 290);
+  transition: transform 0.4s ease-out;
+}
+
+.firstImage img, .secondImage img, .thirdImage img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .firstImage, .secondImage, .thirdImage {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .firstImage, .secondImage, .thirdImage {
+    height: 500px;
+    gap: 2.5rem;
+  }
+}
