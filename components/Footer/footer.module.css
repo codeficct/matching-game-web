@@ -1,0 +1,14 @@
+.footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  line-height: 16.0004px;
+}
+
+@media screen and (min-width: 960px) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
