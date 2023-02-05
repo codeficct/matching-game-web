@@ -28,14 +28,15 @@
   position: relative;
   padding: 0;
   margin: 0;
-  height: 400px;
+  height: 300px;
   width: 100%;
-  /* aspect-ratio: 7/14; */
 }
 
 .imageApp img {
   object-fit: contain;
   transform: translateY(40%) scale(1.6);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .firstSubtitle {
@@ -54,6 +55,10 @@
     margin: 2rem;
   }
 
+  .imageApp {
+    height: 400px;
+  }
+
   .firstSubtitle {
     font-size: 2rem;
   }
@@ -67,6 +72,7 @@
   .firstContent, .secondContent {
     margin: 2rem auto;
     font-size: 1.5rem;
+    width: 90%;
   }
 
   .firstContent {
