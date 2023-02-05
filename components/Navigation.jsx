@@ -8,9 +8,7 @@ export default function Navigation () {
     <header className={styles.header}>
       <nav className={styles.navigation}>
         <Link href='/' className={styles.title}>
-          <h1>
-            Matching Game
-          </h1>
+          <h1>Matching Game</h1>
           <Image src='/logo.png' priority width={26} height={26} alt='Matching Game ficct' />
         </Link>
         <ul>
