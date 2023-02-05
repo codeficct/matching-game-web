@@ -23,7 +23,7 @@ export default async function LeaderboardPage () {
           {users.map(({ _id, name, photo, score }, index) => (
             <li className={styles.userItem} key={_id}>
               <figure className={styles.photo}>
-                <Image src={photo} alt={name} fill sizes='100vw' priority />
+                <Image src={photo} alt={name} fill sizes='100vw' />
               </figure>
               <h3>{name}</h3>
               <span>{score}</span>
