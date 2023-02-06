@@ -10,10 +10,10 @@ export default async function registerHandler(req, res) {
     return res.status(405).json({ message: 'Método no permitido.' })
   }
 
-  const { name, email, password, confirmPassword } = body
+  const { name, email, password, confirmPassword, photo } = body
 
-  if (!name || !email || !password || !confirmPassword) {
-    return res.status(400).json({ message: 'Nombre, email y contraseña son requeridos.' })
+  if (!name || !email || !password || !confirmPassword || !photo) {
+    return res.status(400).json({ message: 'Nombre, photo, email y contraseña son requeridos.' })
   }
 
   if (password !== confirmPassword) {
@@ -26,9 +26,7 @@ export default async function registerHandler(req, res) {
       return res.status(400).json({ message: 'El email ya está registrado.' })
     }
 
-    const user = new User({
-      name, email, password
-    })
+    const user = new User({ name, photo, email, password })
 
     await user.encryptPassword()
     await user.save()
