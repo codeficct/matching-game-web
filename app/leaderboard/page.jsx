@@ -2,12 +2,12 @@ import Image from 'next/image'
 import styles from './leaderboard.module.css'
 
 function fetchPost () {
-  return fetch('http://localhost:3000/api/matching-game', {
+  const isDev = process.env.NODE_ENV === 'development'
+  return fetch(isDev ? process.env.API_DOMAIN_DEV : process.env.API_DOMAIN, {
     next: {
       revalidate: 10
     }
-  })
-    .then(response => response.json())
+  }).then(response => response.json())
 }
 export default async function LeaderboardPage () {
   const users = await fetchPost()
@@ -23,7 +23,7 @@ export default async function LeaderboardPage () {
           {users.map(({ _id, name, photo, score }, index) => (
             <li className={styles.userItem} key={_id}>
               <figure className={styles.photo}>
-                <Image src={photo} alt={name} fill sizes='100vw' priority />
+                <Image src={photo} alt={name} fill sizes='100vw' />
               </figure>
               <h3>{name}</h3>
               <span>{score}</span>
