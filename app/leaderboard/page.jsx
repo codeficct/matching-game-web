@@ -2,12 +2,12 @@ import Image from 'next/image'
 import styles from './leaderboard.module.css'
 
 function fetchPost () {
-  return fetch('http://localhost:3000/api/matching-game', {
+  const isDev = process.env.NODE_ENV === 'development'
+  return fetch(isDev ? process.env.API_DOMAIN_DEV : process.env.API_DOMAIN, {
     next: {
       revalidate: 10
     }
-  })
-    .then(response => response.json())
+  }).then(response => response.json())
 }
 export default async function LeaderboardPage () {
   const users = await fetchPost()
