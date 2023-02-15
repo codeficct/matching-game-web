@@ -11,7 +11,10 @@ export default async function handlerUserId(req, res) {
     return res.status(405).json({ message: 'Método no permitido.' })
   }
   try {
-    const user = await User.findByIdAndUpdate(id, { $inc: { score: body.score } }, { new: true, runValidators: true })
+    const user = await User.findByIdAndUpdate(id,
+      { $inc: { score: body.score }, $set: { maxLevel: body.maxLevel } },
+      { new: true, runValidators: true })
+
     if (!user) return res.status(400).json({ message: 'Usuario no encontrado.' })
     return res.status(200).json(user)
   } catch (error) {
