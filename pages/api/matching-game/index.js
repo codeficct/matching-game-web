@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const { method } = req
   switch (method) {
     case 'GET': {
-      const users = await User.find({}).select('name email score photo').sort({ score: -1 })
+      const users = await User.find({}).select('name email score photo maxLevel').sort({ score: -1 })
       return res.status(200).json(users)
     }
     case 'POST':
