@@ -8,6 +8,11 @@ const userSchema = new Schema({
     required: true,
     default: 0
   },
+  maxLevel: {
+    type: Number,
+    required: true,
+    default: 0
+  },
   photo: {
     type: String,
     required: true
