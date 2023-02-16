@@ -13,9 +13,9 @@ export default async function handler(req, res) {
     case 'PUT':
     case 'DELETE': {
       await User.deleteMany({})
-      return res.status(204).json({ message: 'Users deleted' })
+      return res.status(204).json({ message: 'Usuario Eliminado' })
     }
     default:
-      return res.status(405).end(`Method ${method} Not Allowed`)
+      return res.status(405).end(`Método ${method} no permitido`)
   }
 }
