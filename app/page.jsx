@@ -1,4 +1,5 @@
 import Demo from '@/demo/Demo'
+import Download from '@/download'
 import Hero from '@/Hero'
 import Image from 'next/image'
 import styles from './home.module.css'
@@ -28,6 +29,7 @@ export default function HomePage () {
       <section className={styles.secondContent}>
         <p>Emparejar un objeto con otro es una tarea compleja, y se vuelve especialmente complicado cuando haces coincidir algo más abstracto, como una imagen, un color o un sonido. La combinación también ayuda con el enfoque.</p>
       </section>
+      <Download />
     </main>
   )
 }

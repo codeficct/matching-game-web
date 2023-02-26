@@ -7,10 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: 1.5rem;
+  font-size: var(--font-sm2);
   max-width: 1080px;
-  margin: 1.5rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   line-height: 1.4;
   background-color: #1e063d;
   border-radius: 1.5rem;
@@ -40,9 +40,9 @@
 }
 
 .firstSubtitle {
-  padding-left: 2rem;
+  padding: 0 1rem;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: var(--font-lg);
   letter-spacing: 0.128px;
   list-style: 36px;
   text-align: start;
@@ -51,27 +51,34 @@
 }
 
 @media screen and (min-width: 640px) {
+  .firstSubtitle {
+    padding: 0 2rem;
+    font-size: var(--font-xl);
+  }
+
   .firstContent, .secondContent {
     margin: 2rem;
+    padding: 1.5rem;
   }
 
   .imageApp {
     height: 400px;
   }
 
-  .firstSubtitle {
-    font-size: 2rem;
-  }
-
   .firstContent, .secondContent {
-    font-size: 1.5rem;
+    font-size: var(--font-md);
   }
 }
 
 @media screen and (min-width: 960px) {
+  .firstSubtitle {
+    padding: 0;
+    width: 90%;
+  }
+
   .firstContent, .secondContent {
     margin: 2rem auto;
-    font-size: 1.5rem;
+    font-size: var(--font-md);
     width: 90%;
   }
 
@@ -81,12 +88,12 @@
 
   .imageApp {
     width: 40%;
-    height: 400px;
+    height: 300px;
   }
 
   .imageApp img {
     object-fit: contain;
-    transform: translateY(40%) scale(1.5);
+    transform: translateY(40%) scale(1.8);
   }
 
   .firstContent div {
@@ -94,6 +101,6 @@
     justify-content: center;
     z-index: 10;
     width: 60%;
-    font-size: 1.7rem;
+    font-size: var(--font-lg);
   }
 }

@@ -3,8 +3,22 @@
   margin: 0 auto;
   padding: 2rem;
   opacity: 0.8;
-  font-size: 0.9rem;
-  line-height: 16.0004px;
+  font-size: var(--font-sm);
+  line-height: 1.1rem;
+  text-align: center;
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer a:hover {
+  color: #bf36ff;
+  opacity: 1;
+  transition: all 0.2s ease-out;
 }
 
 @media screen and (min-width: 960px) {

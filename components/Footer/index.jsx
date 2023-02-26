@@ -5,7 +5,10 @@ export default function Footer () {
 
   return (
     <footer className={styles.footer}>
-      Copyright © {age} Matching Game
+      <div>
+        <span>v.0.1.1</span>
+        <span>Copyright © {age} Matching Game | Una iniciativa de <a href='https://github.com/LuiSauter' target='_blank' rel='noreferrer'>Luis G. Janco Alvarez</a></span>
+      </div>
     </footer>
   )
 }

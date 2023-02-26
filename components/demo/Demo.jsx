@@ -11,9 +11,8 @@ export default function Demo () {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = -window.pageYOffset || document.documentElement.scrollTop
-      // const scrollPercent = scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
       const fastScroll = (scrollTop * 0.4) + scrollTop + 290
-      console.log({ scrollTop, fastScroll })
+
       refFirstDemo.current.style.transform = `matrix(1, 0, 0, 1, 0, ${fastScroll})`
       refSecondDemo.current.style.transform = `matrix(1, 0, 0, 1, 0, ${scrollTop + 160})`
       refThirdDemo.current.style.transform = `matrix(1, 0, 0, 1, 0, ${fastScroll})`
